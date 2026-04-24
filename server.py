@@ -1,6 +1,8 @@
 import base64, os
 from flask import Flask, jsonify, request, send_from_directory
 from werkzeug.routing import BaseConverter
+from flask_cors import CORS
+CORS(app)
 
 class EverythingConverter(BaseConverter):
     regex = '.*'
